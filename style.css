@@ -125,6 +125,7 @@ img.logo {
   color: #ddd; max-width: 700px; margin-inline: auto;
 }
 .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-logo { margin-top: 2.5rem; }
 .scroll-down {
   position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
   color: var(--white); font-size: 1.5rem; animation: bounce 2s infinite; z-index: 2;

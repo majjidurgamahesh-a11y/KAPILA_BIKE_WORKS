@@ -73,17 +73,10 @@
           <a href="tel:9573623152" class="btn btn-outline"
             ><i class="fa-solid fa-phone"></i> 9573623152</a
           >
-          <a
-            href="https://wa.me/919133852787"
-            target="_blank"
-            class="btn btn-whatsapp"
-            ><i class="fa-brands fa-whatsapp"></i> WhatsApp</a
-          >
         </div>
 
-        <div class="hero-btns">
+        <div class="hero-btns hero-logo">
           <img src="images/logo.jpg" alt="Showcase bike" class="logo" />
-        
         </div>
       </div>
       <a href="#about" class="scroll-down"
@@ -356,10 +349,11 @@
         </div>
         <form class="contact-form" onsubmit="handleForm(event)">
           <h3>Send a Message</h3>
-          <input type="text" placeholder="Your Name" required />
-          <input type="tel" placeholder="Phone Number" required />
-          <input type="text" placeholder="Bike Model" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="text" name="bike" placeholder="Bike Model" />
           <textarea
+            name="message"
             placeholder="Tell us what your bike needs..."
             rows="5"
             required
