@@ -29,10 +29,26 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 revealEls.forEach(el => io.observe(el));
 
-// Contact form
+// Contact form — send the enquiry through WhatsApp
 function handleForm(e) {
   e.preventDefault();
-  alert("Thank you! We'll contact you shortly. 🏍️");
+
+  const form = new FormData(e.target);
+  const name = form.get('name').trim();
+  const phone = form.get('phone').trim();
+  const bike = form.get('bike').trim() || 'Not specified';
+  const message = form.get('message').trim();
+
+  const text = [
+    'Hello Kapila Bike Works! I would like to make an enquiry.',
+    '',
+    `Name: ${name}`,
+    `Phone: ${phone}`,
+    `Bike Model: ${bike}`,
+    `Message: ${message}`,
+  ].join('\n');
+
+  window.open(`https://wa.me/919133852787?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   e.target.reset();
 }
 
